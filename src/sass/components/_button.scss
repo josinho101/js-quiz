@@ -1,0 +1,23 @@
+.button {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $color-primary;
+    border-radius: 2rem;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  &.large {
+    padding: 2rem 3rem;
+  }
+
+  &:hover {
+    transform: translateY(-0.1rem);
+    background-color: darken($color-primary, 10%);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+}

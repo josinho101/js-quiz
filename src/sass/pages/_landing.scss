@@ -1,0 +1,22 @@
+.radio-group {
+  list-style: none;
+  margin-top: 2rem;
+  font-size: 2rem;
+
+  &__items {
+    display: inline-block;
+    margin-right: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & label {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.button-holder {
+  margin-top: 3rem;
+}
