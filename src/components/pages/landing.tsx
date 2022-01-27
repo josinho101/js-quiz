@@ -1,6 +1,6 @@
-const logo = require("../assets/img/logo.png");
+const logo = require("../../assets/img/logo.png");
 
-const Header = () => {
+const Landing = () => {
   return (
     <header className="header">
       <h1 className="header__title">
@@ -8,7 +8,7 @@ const Header = () => {
         <span className="header__title-main">JS Quiz</span>
       </h1>
       <div className="header__title-sub">
-        Welcome to JavaScript quiz. Let's prove your skill level !!!
+        Welcome to JavaScript quiz. Let's prove your skill level !!
       </div>
       <div className="header__user-info">
         <div>
@@ -34,7 +34,7 @@ const Header = () => {
         </ul>
         <div className="button-holder">
           <a href="#" className="button large">
-            Let's begin
+            Proceed
           </a>
         </div>
       </div>
@@ -42,4 +42,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Landing;

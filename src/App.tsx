@@ -1,9 +1,9 @@
-import Header from "./components/header";
+import Landing from "./components/pages/landing";
 
 const App = () => {
   return (
     <div className="wrapper">
-      <Header />
+      <Landing />
     </div>
   );
 };
