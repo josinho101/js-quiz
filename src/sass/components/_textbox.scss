@@ -1,0 +1,12 @@
+.textbox {
+  width: 50%;
+  padding: 1rem;
+  font-size: 3rem;
+  border-radius: 1rem;
+  border: 0.1rem solid $color-dark-grey;
+
+  &:focus {
+    outline: $color-primary solid 0.2rem;
+    border: 0.1rem solid $color-primary;
+  }
+}

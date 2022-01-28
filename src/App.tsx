@@ -1,9 +1,9 @@
-import Landing from "./pages/landing";
+import LandingPage from "./pages/landing/landing";
 
 const App = () => {
   return (
     <div className="wrapper">
-      <Landing />
+      <LandingPage />
     </div>
   );
 };
