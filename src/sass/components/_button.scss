@@ -1,28 +1,33 @@
 .button {
-  &:link,
-  &:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $color-white;
-    background-color: $color-primary;
-    border-radius: 2rem;
-    font-size: 2rem;
-    position: relative;
-    display: inline-block;
-  }
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-white;
+  background-color: $color-primary;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  position: relative;
+  display: inline-block;
+  border-style: none;
 
   &.large {
+    font-size: 1.5rem;
     padding: 1.5rem 2.5rem;
+  }
+
+  &.small {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
   }
 
   &:hover {
     transform: translateY(-0.1rem);
     background-color: darken($color-primary, 10%);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.7);
   }
 
   &:active {
     transform: translateY(0.01rem);
-    box-shadow: 0 0.25rem 0.5rem rgba($color-black, 0.2);
+    box-shadow: 0 0.3rem 0.7rem rgba($color-black, 0.5);
   }
 }
