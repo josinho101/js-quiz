@@ -1,5 +1,5 @@
 import Radio from "../../components/radio";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import QuizTypes from "../../enums/quiztypes";
 import Button from "../../components/button";
 import TextBox from "../../components/textbox";
@@ -10,11 +10,19 @@ const logo = require("../../assets/img/logo.png");
 
 interface Props {
   onLaunchClicked: (userInfo: UserInfo) => void;
+  userInfo?: UserInfo;
 }
 
 const UserInfoCard: React.FC<Props> = (props) => {
   const [username, setUsername] = useState<string>("");
   const [quizType, setQuizType] = useState<QuizTypes>(QuizTypes.Beginner);
+
+  useEffect(() => {
+    if (props.userInfo) {
+      setQuizType(props.userInfo.type);
+      setUsername(props.userInfo.username);
+    }
+  }, [props.userInfo]);
 
   const onQuizTypeChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuizType(+e.target.value);

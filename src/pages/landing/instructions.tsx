@@ -1,7 +1,11 @@
 import Button from "../../components/button";
 import Card from "../../components/card";
 
-const Instructions = () => {
+interface Props {
+  onBackClicked: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+const Instructions: React.FC<Props> = (props) => {
   return (
     <Card className="instructions">
       <h2>Quiz Instructions</h2>
@@ -23,7 +27,11 @@ const Instructions = () => {
         </ul>
       </div>
       <div className="button-holder">
-        <Button text="Back" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Button
+          text="Back"
+          className="right-margin-2 outlined"
+          onClick={props.onBackClicked}
+        />
         <Button text="Start" />
       </div>
     </Card>

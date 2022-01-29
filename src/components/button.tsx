@@ -5,11 +5,15 @@ interface Props {
   text: string;
   size?: "medium" | "large" | "small";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  className?: string;
 }
 
 const Button: React.FC<Props> = (props) => {
   return (
-    <button className={clsx("button", props.size)} onClick={props.onClick}>
+    <button
+      className={clsx("button", props.size, props.className)}
+      onClick={props.onClick}
+    >
       {props.text}
     </button>
   );

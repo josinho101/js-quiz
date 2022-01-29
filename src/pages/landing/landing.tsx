@@ -15,12 +15,21 @@ const LandingPage = () => {
     setAppSection(AppSections.Instructions);
   };
 
+  const onInstructionsBackClicked = () => {
+    setAppSection(AppSections.UserInfo);
+  };
+
   const renderAppSection = () => {
     switch (appSection) {
       case AppSections.UserInfo:
-        return <UserInfoCard onLaunchClicked={onUserInfoLaunchClicked} />;
+        return (
+          <UserInfoCard
+            onLaunchClicked={onUserInfoLaunchClicked}
+            userInfo={userInfo}
+          />
+        );
       case AppSections.Instructions:
-        return <Instructions />;
+        return <Instructions onBackClicked={onInstructionsBackClicked} />;
       default:
         return null;
     }
