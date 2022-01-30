@@ -16,6 +16,7 @@ interface Props {
 const UserInfoCard: React.FC<Props> = (props) => {
   const [username, setUsername] = useState<string>("");
   const [quizType, setQuizType] = useState<QuizTypes>(QuizTypes.Beginner);
+  const [isInvalid, setIsInvalid] = useState<boolean>(false);
 
   useEffect(() => {
     if (props.userInfo) {
@@ -28,11 +29,17 @@ const UserInfoCard: React.FC<Props> = (props) => {
     setQuizType(+e.target.value);
   };
 
-  const onUsernameChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsInvalid(false);
     setUsername(e.target.value);
   };
 
   const onLaunchClicked = () => {
+    if (username.trim() === "") {
+      setIsInvalid(true);
+      return;
+    }
+
     props.onLaunchClicked({ type: quizType, username: username } as UserInfo);
   };
 
@@ -50,7 +57,8 @@ const UserInfoCard: React.FC<Props> = (props) => {
           <TextBox
             value={username}
             placeholder="Enter your name"
-            onChange={onUsernameChanged}
+            onChange={onUsernameChange}
+            className={isInvalid ? "error nodding-animate" : ""}
           />
         </div>
         <ul className="radio-group">

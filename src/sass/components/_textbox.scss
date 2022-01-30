@@ -9,4 +9,13 @@
     outline: $color-primary solid 0.2rem;
     border: 0.1rem solid $color-primary;
   }
+
+  &.error {
+    outline: $color-invalid solid 0.2rem;
+    border: 0.1rem solid $color-invalid;
+  }
+
+  &.nodding-animate {
+    animation: nodding 0.2s ease-out;
+  }
 }

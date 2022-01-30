@@ -1,0 +1,17 @@
+@keyframes nodding {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-0.4rem);
+  }
+
+  50% {
+    transform: translateX(0.4rem);
+  }
+
+  100% {
+    transform: translateX(0rem);
+  }
+}
