@@ -1,0 +1,37 @@
+.header {
+  height: 9vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: $color-white;
+  padding: 1rem;
+  display: flex;
+
+  &__title {
+    margin-left: 4rem;
+    width: 20vw;
+
+    &-main {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__logo {
+    height: 6vh;
+    float: left;
+  }
+
+  &__userinfo {
+    width: 80vw;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+
+    &__username {
+      margin-right: 4rem;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+}

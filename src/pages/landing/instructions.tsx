@@ -3,6 +3,7 @@ import Card from "../../components/card";
 
 interface Props {
   onBackClicked: React.MouseEventHandler<HTMLButtonElement>;
+  onStartClicked: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const Instructions: React.FC<Props> = (props) => {
@@ -32,7 +33,7 @@ const Instructions: React.FC<Props> = (props) => {
           className="right-margin-2 outlined"
           onClick={props.onBackClicked}
         />
-        <Button text="Start" />
+        <Button text="Start" onClick={props.onStartClicked} />
       </div>
     </Card>
   );
